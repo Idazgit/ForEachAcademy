@@ -4,7 +4,7 @@ export class excuse {
     this.tag = tag;
     this.message = message;
   }
-  // Première Validation assez basique ensuite dans le controller je rajouterai que http doit etre une suite de chiffre
+  // Première Validation assez basique ensuite dans le controller je rajouterai qu'http doit être une suite de chiffre
   isValid() {
     if (!this.http_code || this.http_code.trim() === "") {
       return { valid: false, message: "Le code Http est requis." };
