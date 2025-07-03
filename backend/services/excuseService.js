@@ -1,5 +1,5 @@
 import { excuseRepository } from "../repositories/excuseRepository.js";
-import { excuse } from "../models/excuseModel.js";
+import { Excuse } from "../models/excuseModel.js";
 
 export const excuseService = {
   async getAllExcuses() {
@@ -12,5 +12,11 @@ export const excuseService = {
 
   async randomExcuse() {
     return await excuseRepository.randomExcuse();
+  },
+  async createExcuse(data) {
+    const excuse = new Excuse(data.http_code, data.tag, data.message);
+    const validation = excuse.isValid();
+    if (!validation.valid) throw new Error(validation.message);
+    return await excuseRepository.createExcuse(excuse);
   },
 };

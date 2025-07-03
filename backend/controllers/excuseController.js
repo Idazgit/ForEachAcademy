@@ -30,4 +30,27 @@ export const excuseController = {
       res.status(500).json({ error: error.message });
     }
   },
+
+  async createExcuse(req, res) {
+    // Maintenant dans mon Controller je viens chercher la requête du body et la vérifier, je lui demande de rejeter les requêtes
+    // de http_code qui ne sont pas des nombres et d'envoyer un message d'erreur
+    try {
+      const { http_code, tag, message } = req.body;
+
+      if (!/^\d+$/.test(http_code)) {
+        return res
+          .status(400)
+          .json({ error: "Le code HTTP doit être un nombre." });
+      }
+
+      const excuse = await excuseService.createExcuse({
+        http_code,
+        tag,
+        message,
+      });
+      res.status(201).json(excuse);
+    } catch (err) {
+      res.status(400).json({ error: err.message });
+    }
+  },
 };

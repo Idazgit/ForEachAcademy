@@ -1,4 +1,4 @@
-export class excuse {
+export class Excuse {
   constructor(http_code, tag, message) {
     this.http_code = http_code;
     this.tag = tag;

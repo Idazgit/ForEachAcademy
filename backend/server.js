@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 import excuseRoutes from "./routes/excuseRoutes.js";
 
 const app = express();
 const PORT = 5000;
+// Validation Cors
+app.use(cors());
 
 // Middleware pour lire le JSON
 app.use(express.json());

@@ -1,4 +1,5 @@
 import db from "../models/db.js";
+import { Excuse } from "../models/excuseModel.js";
 
 export const excuseRepository = {
   // FindAll basique pou récupérer l'entièrété des données dans la table excuses
@@ -32,6 +33,21 @@ export const excuseRepository = {
         (err, row) => {
           if (err) reject(err);
           else resolve(row);
+        }
+      );
+    });
+  },
+
+  // Permet l'ajout d'une excuse
+  createExcuse(excuse) {
+    return new Promise((resolve, reject) => {
+      const sql = `INSERT INTO excuses (http_code, tag, message) VALUES (?,?,?)`;
+      db.run(
+        sql,
+        [excuse.http_code, excuse.tag, excuse.message],
+        function (err) {
+          if (err) reject(err);
+          else resolve({ id: this.lastID }); // cette ligne permet de retourner l'id de l'excuse que je viens de créer
         }
       );
     });
