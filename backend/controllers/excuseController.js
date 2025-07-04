@@ -43,6 +43,14 @@ export const excuseController = {
           .json({ error: "Le code HTTP doit être un nombre." });
       }
 
+      // Je rajoute un vérif pour ne pas recréer des http_code déjà présent grâce a ma méthode getExcuseByHttp
+      const existingExcuse = await excuseService.getExcuseByHttp(http_code);
+      if (existingExcuse) {
+        return res
+          .status(409)
+          .json({ error: "Une excuse avec ce code Http existe déjà" });
+      }
+
       const excuse = await excuseService.createExcuse({
         http_code,
         tag,
