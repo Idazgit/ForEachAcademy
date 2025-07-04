@@ -1,0 +1,24 @@
+.page404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+.img404 {
+  max-width: 600px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.button404 {
+  padding: 1rem;
+  background-color: #2f4550;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: clamp(0.5rem, 0.7vw + 0.5rem, 3rem);
+  margin-top: 2rem;
+}
