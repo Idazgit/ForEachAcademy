@@ -9,11 +9,11 @@ router.get("/", excuseController.getAllExcuses);
 // Route pour récupérer aléatoirement un élément de ma table excuse
 router.get("/random", excuseController.randomExcuse);
 
-// Route pour récupérer l'excuse par son code HTTP
-router.get("/:http_code", excuseController.getExcuseByHttp);
-
 // Route de création d'une nouvelle excuse
 router.post("/create", excuseController.createExcuse);
+
+// Route pour récupérer l'excuse par son code HTTP
+router.get("/:http_code", excuseController.getExcuseByHttp);
 
 export default router;
 
