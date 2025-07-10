@@ -24,7 +24,7 @@ Dans ce README de projet, vous retrouverez les **technologies utilisées** ainsi
 ## ▶️ LANCEMENT DU PROJET
 
 ```
-cd excuses-de-dev
+cd forEachAcademy
 npm install
 ```
 
