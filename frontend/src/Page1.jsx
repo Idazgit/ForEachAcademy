@@ -28,7 +28,7 @@ function Page1() {
     const maxAttempts = 10;
 
     while (attempt < maxAttempts) {
-      const res = await fetch("http://localhost:5000/excuses/random");
+      const res = await fetch("http://localhost:4000/excuses/random");
       const data = await res.json();
 
       // on vérifie si l'excuse à déjà était tirée

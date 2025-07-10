@@ -49,7 +49,7 @@ export function ModalPost({ text, onClick }) {
 
     // Si toutes les données sont valides, on peut envoyer la requête au serveur sur ma route POST
     try {
-      const response = await fetch("http://localhost:5000/excuses/create", {
+      const response = await fetch("http://localhost:4000/excuses/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -7,7 +7,7 @@
 
 const fetchRandomExcuse = async () => {
   // On fetch la route random pour ne pas charger toutes les excuses directement
-  const res = await fetch("http://localhost:5000/excuses/random");
+  const res = await fetch("http://localhost:4000/excuses/random");
   const data = await res.json();
 
   // on vérifie si l'excuse à déjà était tirée

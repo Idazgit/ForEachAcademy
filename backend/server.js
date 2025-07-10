@@ -3,7 +3,7 @@ import cors from "cors";
 import excuseRoutes from "./routes/excuseRoutes.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = 4000;
 // Validation Cors
 app.use(cors());
 

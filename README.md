@@ -84,10 +84,10 @@ Dans `excuseRoute.js`, j'importe les controllers pour créer mes routes avec Exp
 
 | Description                      | URL                                    |
 | -------------------------------- | -------------------------------------- |
-| Afficher toutes les excuses      | `http://localhost:5000/excuses`        |
-| Ajouter une excuse               | `http://localhost:5000/excuses/create` |
-| Trouver une excuse par HTTP code | `http://localhost:5000/excuses/701`    |
-| Obtenir une excuse aléatoire     | `http://localhost:5000/excuses/random` |
+| Afficher toutes les excuses      | `http://localhost:4000/excuses`        |
+| Ajouter une excuse               | `http://localhost:4000/excuses/create` |
+| Trouver une excuse par HTTP code | `http://localhost:4000/excuses/701`    |
+| Obtenir une excuse aléatoire     | `http://localhost:4000/excuses/random` |
 
 ---
 
